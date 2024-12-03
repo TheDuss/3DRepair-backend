@@ -7,9 +7,8 @@ using Microsoft.EntityFrameworkCore;
 
 namespace API.Controllers
 {
-    [ApiController]
-    [Route("api/[controller]")]
-    public class RepairController(DataContext context) : ControllerBase
+   
+    public class RepairController(DataContext context) : BaseApiController
     {
         [HttpGet]
         public async Task<ActionResult<IEnumerable<RepairService>>> GetServices()
